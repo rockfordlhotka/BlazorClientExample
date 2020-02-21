@@ -4,6 +4,12 @@
 
 <div>@statusText</div>
 
+@if (person == null)
+{
+<div>Loading...</div>
+}
+else
+{
 @*<EditForm Model="@person" OnValidSubmit="@FormValid" OnInvalidSubmit="@FormInvalid">*@
 <EditForm Model="@person" OnSubmit="@FormSubmitted">
   <DataAnnotationsValidator />
@@ -15,6 +21,7 @@
   <div>@person.Name is @person.Age years old</div>
   <input type="submit" value="Save" class="btn btn-primary" />
 </EditForm>
+}
 
 @code {
   private PersonEdit person;
