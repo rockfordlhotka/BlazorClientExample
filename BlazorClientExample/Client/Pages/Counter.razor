@@ -10,10 +10,8 @@
 <button class="btn btn-primary" @onclick="() => IncrementCount(5)">Add 5</button>
 
 <button class="btn btn-primary" @onclick="() => currentCount--">Decrement</button>
-
-
 @code {
-  private int currentCount = 0;
+    private int currentCount = 0;
 
   [Parameter]
   public string start { get; set; }
